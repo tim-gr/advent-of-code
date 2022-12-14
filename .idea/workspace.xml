@@ -5,52 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7936512f-f33d-4dbc-8b86-6e3c171fd4e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2022/Day01.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2022/Day02.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2022/Day03.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2022/Day04.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2022/Day05.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2022/Day06.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2022/Day07.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2022/Day10.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2022/Day11.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2022/Template.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/day01.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/day02.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/day03.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/day04.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/day05.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/day06.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/day07.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/day08.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/day09.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/day10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/day11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/aoc2022/CheckSolutions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2022/Day08.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2022/Day12.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/day12.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2022/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DetektSettingsMigration">
+    <option name="stateVersion" value="2" />
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,15 +52,19 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/tim/projects/kotlin/advent-of-code/src/main/kotlin/aoc2022",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/aoc2022" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/aoc2022" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Kotlin.Day12Kt">
     <configuration name="CheckSolutions" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -104,8 +88,24 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Day08Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="aoc2022.Day08Kt" />
+      <module name="advent-of-code.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day12Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="aoc2022.Day12Kt" />
+      <module name="advent-of-code.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Day12Kt" />
+        <item itemvalue="Kotlin.Day08Kt" />
         <item itemvalue="Gradle.CheckSolutions" />
       </list>
     </recent_temporary>
