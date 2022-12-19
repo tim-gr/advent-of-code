@@ -81,4 +81,18 @@ class CheckSolutions {
         assertEquals(339, day12.first)
         assertEquals(332, day12.second)
     }
+
+    @Test
+    fun testDay13() {
+        val day13 = day13()
+        assertEquals(6420, day13.first)
+        assertEquals(22000, day13.second)
+    }
+
+    @Test
+    fun testDay14() {
+        val day14 = day14()
+        assertEquals(737, day14.first)
+        assertEquals(28145, day14.second)
+    }
 }
