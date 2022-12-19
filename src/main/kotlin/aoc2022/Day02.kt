@@ -1,13 +1,18 @@
 package aoc2022
 
 import java.io.File
-import kotlin.Exception
 
 fun main() {
     println(day02())
 }
 
 private const val FILE_PATH_DAY02 = "src/main/resources/aoc2022/day02.txt"
+private const val POINTS_WIN_GAME = 6
+private const val POINTS_TIED_GAME = 3
+private const val POINTS_LOST_GAME = 0
+private const val POINTS_ROCK = 1
+private const val POINTS_PAPER = 2
+private const val POINTS_SCISSOR = 3
 
 fun day02(filePath: String = FILE_PATH_DAY02): Pair<Int, Int> {
     val lines = File(filePath).readLines()
@@ -23,7 +28,7 @@ internal fun determineScoreSolution1(lines: List<String>): Int {
         .fold(0) { acc, element ->
             acc + element.second.score + determineGameResult(element.first, element.second).score
         }
-    }
+}
 
 internal fun determineScoreSolution2(lines: List<String>): Int {
     return lines
@@ -43,11 +48,11 @@ internal fun determineGameResult(opponentSymbol: Symbol, ownSymbol: Symbol): Gam
 }
 
 internal enum class GameResult(val score: Int) {
-    WIN(6), TIE(3), LOSS(0)
+    WIN(POINTS_WIN_GAME), TIE(POINTS_TIED_GAME), LOSS(POINTS_LOST_GAME)
 }
 
 internal enum class Symbol(val score: Int) {
-    ROCK(1), PAPER(2), SCISSOR(3)
+    ROCK(POINTS_ROCK), PAPER(POINTS_PAPER), SCISSOR(POINTS_SCISSOR)
 }
 
 internal fun String.convertToSymbol(): Symbol {
@@ -55,7 +60,7 @@ internal fun String.convertToSymbol(): Symbol {
         "A", "X" -> Symbol.ROCK
         "B", "Y" -> Symbol.PAPER
         "C", "Z" -> Symbol.SCISSOR
-        else -> throw Exception("No valid Rock-Paper-Scissor symbol: $this")
+        else -> throw IllegalArgumentException("No valid Rock-Paper-Scissor symbol: $this")
     }
 }
 
@@ -64,7 +69,7 @@ internal fun String.convertToSymbol(opponentSymbol: Symbol): Symbol {
         "X" -> opponentSymbol.winsAgainst()
         "Y" -> opponentSymbol
         "Z" -> opponentSymbol.losesAgainst()
-        else -> throw Exception("No valid Rock-Paper-Scissor symbol: $this")
+        else -> throw IllegalArgumentException("No valid Rock-Paper-Scissor symbol: $this")
     }
 }
 

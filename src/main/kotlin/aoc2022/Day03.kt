@@ -1,13 +1,14 @@
 package aoc2022
 
 import java.io.File
-import java.lang.Exception
 
 fun main() {
     println(day03())
 }
 
 private const val FILE_PATH_DAY03 = "src/main/resources/aoc2022/day03.txt"
+private const val UPPER_CASE_TO_PRIORITY = -38
+private const val LOWER_CASE_TO_PRIORITY = -96
 
 fun day03(filePath: String = FILE_PATH_DAY03): Pair<Int, Int> {
     val rucksacks = parseRucksacks(File(filePath).readLines())
@@ -50,11 +51,10 @@ internal fun parseRucksacks(lines: List<String>): List<Rucksack> {
 }
 
 internal fun Char.toPriority(): Int {
-    return if (!this.isLetter()) {
-        throw Exception("Can only be called on letters.")
-    } else if (this.isUpperCase()) {
-        this.code - 38
+    require(this.isLetter()) { "This operation can only be called on chars that represent letters." }
+    return if (this.isUpperCase()) {
+        this.code + UPPER_CASE_TO_PRIORITY
     } else {
-        this.code - 96
+        this.code + LOWER_CASE_TO_PRIORITY
     }
 }

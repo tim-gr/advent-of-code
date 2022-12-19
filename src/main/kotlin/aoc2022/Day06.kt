@@ -1,17 +1,20 @@
 package aoc2022
 
 import java.io.File
+import java.lang.IllegalArgumentException
 
 fun main() {
     println(day06())
 }
 
 private const val FILE_PATH_DAY06 = "src/main/resources/aoc2022/day06.txt"
+private const val DISTINCT_MARKERS_PART_1 = 4
+private const val DISTINCT_MARKERS_PART_2 = 14
 
 fun day06(filePath: String = FILE_PATH_DAY06): Pair<Int, Int> {
     val line = File(filePath).readLines().first()
-    val solution1 = calculateToken(line, 4)
-    val solution2 = calculateToken(line, 14)
+    val solution1 = calculateToken(line, DISTINCT_MARKERS_PART_1)
+    val solution2 = calculateToken(line, DISTINCT_MARKERS_PART_2)
     return Pair(solution1, solution2)
 }
 
@@ -26,5 +29,5 @@ internal fun calculateToken(line: String, distinctMarkers: Int): Int {
             }
         }
     }
-    throw Exception("No token with number of <distinctMarkers> in <line>.")
+    throw IllegalArgumentException("No token with number of <distinctMarkers> in <line>.")
 }

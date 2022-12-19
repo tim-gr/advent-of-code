@@ -25,14 +25,14 @@ internal fun calculateTopElementsOnStacks(
 ): String {
 
     if (multipleItemsAtOnce) {
-        moves.forEach {move ->
+        moves.forEach { move ->
             val fromStack = stacks[move.from]!!
             val movedElements = fromStack.takeLast(move.amount)
             repeat(move.amount) { fromStack.removeAt(fromStack.lastIndex) }
             stacks[move.to]!!.addAll(movedElements)
         }
     } else {
-        moves.forEach {move ->
+        moves.forEach { move ->
             repeat(move.amount) {
                 stacks[move.to]!!.add(stacks[move.from]!!.removeLast())
             }

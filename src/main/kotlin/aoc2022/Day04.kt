@@ -17,9 +17,9 @@ fun day04(filePath: String = FILE_PATH_DAY04): Pair<Int, Int> {
 
 internal fun calculateNumberOfFullyIncludedRanges(sectionPairs: List<SectionPair>): Int {
     return sectionPairs.count {
-            it.section1.contains(it.section2.start) && it.section1.contains(it.section2.endInclusive) ||
-                    it.section2.contains(it.section1.start) && it.section2.contains(it.section1.endInclusive)
-        }
+        it.section1.contains(it.section2.start) && it.section1.contains(it.section2.endInclusive) ||
+            it.section2.contains(it.section1.start) && it.section2.contains(it.section1.endInclusive)
+    }
 }
 
 internal fun calculateNumberOfOverlaps(sectionPairs: List<SectionPair>): Int {
@@ -28,6 +28,7 @@ internal fun calculateNumberOfOverlaps(sectionPairs: List<SectionPair>): Int {
 
 internal data class SectionPair(val section1: ClosedRange<Int>, val section2: ClosedRange<Int>)
 
+@Suppress("MagicNumber")
 internal fun parseSectionPairs(lines: List<String>): List<SectionPair> {
     return lines
         .map { it.split("-", ",") }
