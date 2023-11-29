@@ -1,4 +1,4 @@
-package aoc2015
+package util.io
 
 import java.io.File
 

@@ -1,5 +1,8 @@
 package aoc2015
 
+import util.io.println
+import util.io.readInputFile
+
 fun main() {
     val input = readInputFile(year = 2015, day = 3).first()
     Day03.task1(input).println()

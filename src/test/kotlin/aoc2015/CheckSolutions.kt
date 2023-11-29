@@ -1,6 +1,7 @@
 package aoc2015
 
 import org.junit.jupiter.api.Test
+import util.io.readInputFile
 import kotlin.test.assertEquals
 
 class CheckSolutions {

@@ -1,4 +1,7 @@
-package aoc2015
+package util
+
+import util.io.println
+import util.io.readInputFile
 
 fun main() {
     val input = readInputFile(year = 2015, day = 1)

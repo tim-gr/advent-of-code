@@ -1,14 +1,12 @@
 package util.coordinates
 
-import kotlin.math.abs
-
-fun drawCoordinates(data: Set<Coordinates>) {
+fun drawCoordinates(data: Set<GraphPoint>) {
     val maxX = data.maxOf { it.x }
     val maxY = data.maxOf { it.y }
     val minX = data.minOf { it.x }
     val minY = data.minOf { it.y }
     val map = data.groupBy { it.y }
-    for (y in minY..maxY) {
+    for (y in maxY downTo minY) {
         val row = map[y]
         val stringBuilder = StringBuilder()
         stringBuilder.append(".".repeat(1 + maxX - minX))
@@ -19,6 +17,18 @@ fun drawCoordinates(data: Set<Coordinates>) {
         }
         print(stringBuilder.toString().replace(".".toRegex(), "$0 "))
         println(y)
+    }
+    var xCounter = minX
+    while (xCounter % 5 != 0) {
+        print("  ")
+        xCounter++
+    }
+    while (xCounter < maxX) {
+        print(xCounter)
+        repeat(10 - xCounter.toString().length) {
+            print(" ")
+        }
+        xCounter += 5
     }
 }
 
@@ -31,4 +41,4 @@ fun<T> drawCoordinates(data: Array<Array<T>>, transform: (T) -> Char) {
     println()
 }
 
-data class Coordinates(val x: Int, val y: Int, val content: Char)
+data class GraphPoint(val x: Int, val y: Int, val content: Char = 'X')
