@@ -5,23 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7936512f-f33d-4dbc-8b86-6e3c171fd4e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2016/Day02.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/util/io/IOUtil.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aoc2016/day02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2023/Day01.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/aoc2023/CheckSolutions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/aoc2015/Day01.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2015/Day01.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/aoc2015/Day02.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2015/Day02.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/aoc2015/Day03.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/aoc2015/Day03.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/aoc2015/Template.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/util/Template.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/aoc2015/Util.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/util/coordinates/GraphDrawer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/util/coordinates/GraphDrawer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/util/string/StringExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/util/string/StringExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/aoc2022/day16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/aoc2022/day17.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/aoc2015/CheckSolutions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/aoc2015/CheckSolutions.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DetektSettingsMigration">
-    <option name="stateVersion" value="2" />
+    <option name="stateVersion" value="3" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -42,7 +29,17 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="advent-of-code" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -83,7 +80,7 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/aoc2015" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/kotlin/aoc2023" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -92,6 +89,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/aoc2023" />
       <recent name="$PROJECT_DIR$/src/main/resources/aoc2015" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/aoc2016" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/aoc2015" />
@@ -103,14 +101,17 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="aoc2016" />
     </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="aoc2023" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'advent-of-code.test'">
+  <component name="RunManager" selected="Gradle.Tests in 'aoc2015'">
     <configuration name="CheckSolutions" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;aoc2022.CheckSolutions&quot;" />
+        <option name="scriptParameters" value="--tests &quot;aoc2023.CheckSolutions&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -147,19 +148,51 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GraphDrawerKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="util.coordinates.GraphDrawerKt" />
-      <module name="advent-of-code.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Tests in 'aoc2015'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;aoc2015.*&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="LeetcodeKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="util.LeetcodeKt" />
-      <module name="advent-of-code.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Tests in 'aoc2022'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;aoc2022.*&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="StringExtensionsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="util.string.StringExtensionsKt" />
@@ -170,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'aoc2015'" />
+        <item itemvalue="Gradle.Tests in 'aoc2022'" />
+        <item itemvalue="Gradle.CheckSolutions" />
         <item itemvalue="Gradle.Tests in 'advent-of-code.test'" />
         <item itemvalue="Gradle.CheckSolutions" />
-        <item itemvalue="Gradle.CheckSolutions" />
-        <item itemvalue="Kotlin.GraphDrawerKt" />
-        <item itemvalue="Kotlin.StringExtensionsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +232,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
