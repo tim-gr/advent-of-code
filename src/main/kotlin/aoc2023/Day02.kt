@@ -38,22 +38,19 @@ object Day02 {
     private fun parseGames(input: List<String>): List<Game> {
         return input.map { game ->
             val gameId = game.substringAfter("Game ").substringBefore(":").toInt()
-            val draws = game.substringAfter(":").trim().split(";").map { drawsString ->
-                drawsString.split(",").map { it.trim() }.map {
-                    val (number, color) = it.split(" ")
-                    Pair(number.toInt(), color)
+            val draws = game.substringAfter(": ").split("; ").map { round ->
+                round.split(", ").associate { draw ->
+                    val (number, color) = draw.split(" ")
+                    color to number.toInt()
                 }.let { drawsList ->
                     Draw(
-                        blue = drawsList.find { it.second == "blue" }?.first ?: 0,
-                        green = drawsList.find { it.second == "green" }?.first ?: 0,
-                        red = drawsList.find { it.second == "red" }?.first ?: 0,
+                        blue = drawsList["blue"] ?: 0,
+                        green = drawsList["green"] ?: 0,
+                        red = drawsList["red"] ?: 0,
                     )
                 }
             }
-            Game(
-                id = gameId,
-                draws = draws,
-            )
+            Game(id = gameId, draws = draws)
         }
     }
 }
