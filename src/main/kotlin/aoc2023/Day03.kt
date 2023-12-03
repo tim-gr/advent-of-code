@@ -53,8 +53,7 @@ object Day03 {
     }
 
     private fun getNumbersWithAdjacentFields(array: Array<CharArray>): Map<NumberWithPosition, List<Coordinates>> {
-        val numbersWithPosition = findNumbersWithPosition(array)
-        return numbersWithPosition.associateWith { numberWithPosition ->
+        return findNumbersWithPosition(array).associateWith { numberWithPosition ->
             numberWithPosition.toAdjacentFields().filter {
                 it.x >= 0 && it.y >= 0 && it.x < array.first().size && it.y < array.size
             }
@@ -63,46 +62,33 @@ object Day03 {
 
     private fun findNumbersWithPosition(array: Array<CharArray>): List<NumberWithPosition> {
         val numbersWithPosition = mutableListOf<NumberWithPosition>()
-        for (row in array.indices) {
-            var numberWithPosition = NumberWithPosition()
-            for (column in 0 until array.first().size) {
-                val character = array[row][column]
-                if (character.isDigit()) {
-                    if (numberWithPosition.start == null) {
-                        numberWithPosition.start = Coordinates(column, row)
-                    }
-                    numberWithPosition.end = Coordinates(column, row)
-                    numberWithPosition.number += character
-                } else {
-                    if (numberWithPosition.number.isNotBlank()) {
-                        numbersWithPosition.add(numberWithPosition)
-                        numberWithPosition = NumberWithPosition()
-                    }
-                }
-            }
-            if (numberWithPosition.number.isNotBlank()) {
-                numbersWithPosition.add(numberWithPosition)
+        array.forEachIndexed { rowIndex, row ->
+            var column = 0
+            while (column < row.size) {
+                if (row[column].isDigit()) {
+                    val number = row.drop(column).takeWhile { it.isDigit() }.joinToString("")
+                    numbersWithPosition.add(NumberWithPosition(number = number, start = Coordinates(column, rowIndex)))
+                    column += number.length
+                } else column++
             }
         }
         return numbersWithPosition
     }
 
     private fun NumberWithPosition.toAdjacentFields(): List<Coordinates> {
-        require(start != null && end != null)
-        val xRange = Pair(start!!.x - 1, end!!.x + 1)
+        val xRange = Pair(start.x - 1, start.x + number.length)
         val adjacentFields = mutableListOf<Coordinates>()
         for (x in xRange.first..xRange.second) {
-            adjacentFields.add(Coordinates(x, start!!.y - 1))
-            adjacentFields.add(Coordinates(x, start!!.y + 1))
+            adjacentFields.add(Coordinates(x, start.y - 1))
+            adjacentFields.add(Coordinates(x, start.y + 1))
         }
-        adjacentFields.add(Coordinates(xRange.first, start!!.y))
-        adjacentFields.add(Coordinates(xRange.second, start!!.y))
+        adjacentFields.add(Coordinates(xRange.first, start.y))
+        adjacentFields.add(Coordinates(xRange.second, start.y))
         return adjacentFields
     }
 
     private data class NumberWithPosition(
-        var number: String = "",
-        var start: Coordinates? = null,
-        var end: Coordinates? = null,
+        var number: String,
+        var start: Coordinates,
     )
 }

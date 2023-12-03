@@ -36,21 +36,16 @@ object Day02 {
     }
 
     private fun parseGames(input: List<String>): List<Game> {
-        return input.map { game ->
-            val gameId = game.substringAfter("Game ").substringBefore(":").toInt()
+        return input.mapIndexed { index, game ->
             val draws = game.substringAfter(": ").split("; ").map { round ->
                 round.split(", ").associate { draw ->
                     val (number, color) = draw.split(" ")
                     color to number.toInt()
                 }.let { drawsList ->
-                    Draw(
-                        blue = drawsList["blue"] ?: 0,
-                        green = drawsList["green"] ?: 0,
-                        red = drawsList["red"] ?: 0,
-                    )
+                    Draw(blue = drawsList["blue"] ?: 0, green = drawsList["green"] ?: 0, red = drawsList["red"] ?: 0)
                 }
             }
-            Game(id = gameId, draws = draws)
+            Game(id = index + 1, draws = draws)
         }
     }
 }
