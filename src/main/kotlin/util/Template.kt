@@ -10,6 +10,7 @@ fun main() {
 
     // Examples
     DayXX.task1(listOf("")).println()
+    DayXX.task2(listOf("")).println()
 }
 
 object DayXX {
