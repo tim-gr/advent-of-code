@@ -42,10 +42,8 @@ object Day04 {
     }
 
     private fun getWins(card: String): Int {
-        val winningNumbers = card.substringAfter(":").substringBefore("|")
-            .split(" ").filter { it.isNotEmpty() }.map { it.trim() }
-        val cardNumbers = card.substringAfter("|")
-            .split(" ").filter { it.isNotEmpty() }.map { it.trim() }
+        val (winningNumbers, cardNumbers) = card.substringAfter(": ").split(" | ")
+            .map { numbers -> numbers.split(" ").filter { it.isNotEmpty() } }
         return cardNumbers.count { it in winningNumbers }
     }
 }
