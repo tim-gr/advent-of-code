@@ -2,6 +2,7 @@ package aoc2023
 
 import util.coordinates.Coordinates
 import util.io.println
+import util.io.readExampleInputFile
 import util.io.readInputFile
 
 fun main() {
@@ -10,18 +11,7 @@ fun main() {
     Day03.task2(input).println()
 
     // Examples
-    val exampleInput = listOf(
-        "467..114..",
-        "...*......",
-        "..35..633.",
-        "......#...",
-        "617*......",
-        ".....+.58.",
-        "..592.....",
-        "......755.",
-        "...\$.*....",
-        ".664.598..",
-    )
+    val exampleInput = readExampleInputFile(year = 2023, day = 3)
     Day03.task1(exampleInput).println()
     Day03.task2(exampleInput).println()
 }

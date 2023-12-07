@@ -1,12 +1,18 @@
 package aoc2023
 
 import util.io.println
+import util.io.readExampleInputFile
 import util.io.readInputFile
 
 fun main() {
     val input = readInputFile(year = 2023, day = 6)
     Day06.task1(input).println()
     Day06.task2(input).println()
+
+    // Examples
+    val exampleInput = readExampleInputFile(year = 2023, day = 6)
+    Day06.task1(exampleInput).println()
+    Day06.task2(exampleInput).println()
 }
 
 object Day06 {

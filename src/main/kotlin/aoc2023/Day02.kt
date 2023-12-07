@@ -1,6 +1,7 @@
 package aoc2023
 
 import util.io.println
+import util.io.readExampleInputFile
 import util.io.readInputFile
 
 fun main() {
@@ -9,8 +10,9 @@ fun main() {
     Day02.task2(input).println()
 
     // Examples
-    Day02.task1(listOf("Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green")).println()
-    Day02.task2(listOf("Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green")).println()
+    val exampleInput = readExampleInputFile(year = 2023, day = 2)
+    Day02.task1(exampleInput).println()
+    Day02.task2(exampleInput).println()
 }
 
 object Day02 {
