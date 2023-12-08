@@ -33,19 +33,17 @@ object Day05 {
         val seedRanges = input.first().substringAfter("seeds: ").split(" ").map { it.toLong() }
             .chunked(2).map { Pair(it[0], it[1]) }
         val mappings = getMappings(input).reversed()
-        val locationRanges = mappings.first().sortedBy { it.destinationStart }
-        locationRanges.forEach {
-            for (location in it.destinationStart until it.destinationStart + it.length) {
-                var currentTranslation = location
-                mappings.forEach { rangesList ->
-                    currentTranslation = rangesList.getReversedTranslation(currentTranslation)
-                }
-                if (seedRanges.any { range -> currentTranslation >= range.first && currentTranslation < range.first + range.second }) {
-                    return location
-                }
+        var location = 0L
+        while (true) {
+            var currentTranslation = location
+            mappings.forEach { rangesList ->
+                currentTranslation = rangesList.getReversedTranslation(currentTranslation)
             }
+            if (seedRanges.any { range -> currentTranslation >= range.first && currentTranslation < range.first + range.second }) {
+                return location
+            }
+            location++
         }
-        error("No seeds found for any of the given locations")
     }
 
     private fun getMappings(input: List<String>): List<MutableList<Range>> {
