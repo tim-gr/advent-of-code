@@ -6,10 +6,10 @@ fun Any.println() = println(this)
 
 fun readInputFile(year: Int, day: Int) = readFile(year, day)
 
-fun readExampleInputFile(year: Int, day: Int, example: Int? = null) = readFile(
+fun readExampleInputFile(year: Int, day: Int, example: Int = 1) = readFile(
     year = year,
     day = day,
-    suffix = example?.let { "-example-$it" } ?: "-example",
+    suffix = "-example-$example",
 )
 
 private fun readFile(year: Int, day: Int, suffix: String = ""): List<String> {
