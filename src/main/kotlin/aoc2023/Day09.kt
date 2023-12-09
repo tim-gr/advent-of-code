@@ -16,9 +16,7 @@ fun main() {
 
 object Day09 {
 
-    fun task1(input: List<String>) = input.sumOf { line ->
-        getHistoryRows(line).sumOf { it.last() }
-    }
+    fun task1(input: List<String>) = input.sumOf { line -> getHistoryRows(line).sumOf { it.last() } }
 
     fun task2(input: List<String>) = input.sumOf { line ->
         getHistoryRows(line).dropLast(1).foldRight(0L) { numbers, acc -> numbers[0] - acc }
