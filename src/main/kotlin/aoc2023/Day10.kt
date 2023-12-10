@@ -25,17 +25,17 @@ object Day10 {
         val array = input.map { it.toCharArray() }.toTypedArray()
         val loop = getLoop(array)
 
-        for (y in array.indices) {
-            for (x in array[0].indices) {
-                if (Coordinates(x, y) !in loop) {
-                    array[y][x] = '.'
-                }
+        val coordinates = mutableSetOf<Coordinates>()
+        array.indices.forEach { y ->
+            array[0].indices.forEach { x ->
+                coordinates.add(Coordinates(x, y))
             }
         }
+        coordinates.subtract(loop.toSet()).forEach { array[it.y][it.x] = '.' }
 
         var containedTiles = 0
-        for (y in array.indices) {
-            for (x in array[0].indices) {
+        array.indices.forEach { y ->
+            array[0].indices.forEach { x ->
                 if (array[y][x] == '.' && (x downTo 0).count { array[y][it] in northPipes } % 2 != 0) {
                     containedTiles++
                 }
@@ -85,8 +85,8 @@ object Day10 {
         return result
     }
 
-    private val northPipes = listOf('|', 'J', 'L', 'S')
-    private val southPipes = listOf('|', '7', 'F', 'S')
-    private val eastPipes = listOf('-', 'F', 'L', 'S')
-    private val westPipes = listOf('-', '7', 'J', 'S')
+    private val northPipes = setOf('|', 'J', 'L', 'S')
+    private val southPipes = setOf('|', '7', 'F', 'S')
+    private val eastPipes = setOf('-', 'F', 'L', 'S')
+    private val westPipes = setOf('-', '7', 'J', 'S')
 }
