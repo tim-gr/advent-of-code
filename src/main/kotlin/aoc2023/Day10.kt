@@ -23,15 +23,21 @@ object Day10 {
 
     fun task2(input: List<String>): Int {
         val array = input.map { it.toCharArray() }.toTypedArray()
-        val allPositions = getLoop(array)
+        val loop = getLoop(array)
+
+        for (y in array.indices) {
+            for (x in array[0].indices) {
+                if (Coordinates(x, y) !in loop) {
+                    array[y][x] = '.'
+                }
+            }
+        }
+
         var containedTiles = 0
         for (y in array.indices) {
             for (x in array[0].indices) {
-                if (!allPositions.contains(Coordinates(x, y))) {
-                    if ((x downTo 0)
-                            .count { array[y][it] in northPipes && allPositions.contains(Coordinates(it, y)) } % 2 != 0) {
-                        containedTiles++
-                    }
+                if (array[y][x] == '.' && (x downTo 0).count { array[y][it] in northPipes } % 2 != 0) {
+                    containedTiles++
                 }
             }
         }
