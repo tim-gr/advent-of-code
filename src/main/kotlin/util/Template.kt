@@ -15,10 +15,12 @@ fun main() {
 
 object DayXX {
 
+    @Suppress("UNUSED_PARAMETER")
     fun task1(input: List<String>): Int {
         return 0
     }
 
+    @Suppress("UNUSED_PARAMETER")
     fun task2(input: List<String>): Int {
         return 0
     }

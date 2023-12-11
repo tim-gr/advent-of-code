@@ -19,10 +19,12 @@ internal fun parseLines(lines: List<String>): List<String> {
     return lines
 }
 
+@Suppress("UNUSED_PARAMETER")
 internal fun solution1(lines: List<String>): Int {
     return 0
 }
 
+@Suppress("UNUSED_PARAMETER")
 internal fun solution2(lines: List<String>): Int {
     return 0
 }
