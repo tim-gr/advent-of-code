@@ -49,12 +49,12 @@ object Day14 {
             tiltSE(array, isColumns = true)
             tiltSE(array, isColumns = false)
             val arrayInCacheFormat = array.joinToString("") { rows -> rows.joinToString("") }
+            cycleCounter++
             if (cache[arrayInCacheFormat] == null) {
-                cycleCounter++
                 cache[arrayInCacheFormat] = cycleCounter
             } else {
                 val indexFirstLoopItem = cache[arrayInCacheFormat]!!
-                val loopLength = cycleCounter + 1 - indexFirstLoopItem
+                val loopLength = cycleCounter - indexFirstLoopItem
                 val remaining = (CYCLES_TASK_2 - indexFirstLoopItem) % loopLength
                 repeat(remaining) {
                     tiltNW(array, isColumns = true)
