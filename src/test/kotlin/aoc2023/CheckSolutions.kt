@@ -173,4 +173,16 @@ class CheckSolutions {
         val input = readInputFile(year = 2023, day = 14)
         assertEquals(91286, Day14.task2(input))
     }
+
+    @Test
+    fun `2023 day 15 task 1`() {
+        val input = readInputFile(year = 2023, day = 15)
+        assertEquals(517551, Day15.task1(input))
+    }
+
+    @Test
+    fun `2023 day 15 task 2`() {
+        val input = readInputFile(year = 2023, day = 15)
+        assertEquals(286097, Day15.task2(input))
+    }
 }
