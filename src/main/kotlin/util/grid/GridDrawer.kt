@@ -1,6 +1,6 @@
-package util.coordinates
+package util.grid
 
-fun drawCoordinates(data: Set<GraphPoint>) {
+fun drawCoordinates(data: Set<CoordinatesWithChar>) {
     val maxX = data.maxOf { it.x }
     val maxY = data.maxOf { it.y }
     val minX = data.minOf { it.x }
@@ -41,4 +41,4 @@ fun<T> drawCoordinates(data: Array<Array<T>>, transform: (T) -> Char) {
     println()
 }
 
-data class GraphPoint(val x: Int, val y: Int, val content: Char = 'X')
+data class CoordinatesWithChar(val x: Int, val y: Int, val content: Char = 'X')

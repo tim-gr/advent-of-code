@@ -1,6 +1,6 @@
 package aoc2022
 
-import util.coordinates.drawCoordinates
+import util.grid.drawCoordinates
 import java.io.File
 
 fun main() {

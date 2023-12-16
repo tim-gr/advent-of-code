@@ -1,8 +1,8 @@
 package aoc2023
 
-import util.coordinates.Coordinates
-import util.coordinates.Direction
-import util.coordinates.GridWalker
+import util.grid.Coordinates
+import util.grid.Direction
+import util.grid.GridWalker
 import util.io.println
 import util.io.readExampleInputFile
 import util.io.readInputFile

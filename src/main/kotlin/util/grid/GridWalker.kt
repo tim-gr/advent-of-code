@@ -1,4 +1,4 @@
-package util.coordinates
+package util.grid
 
 class GridWalker(
     rows: List<String>,

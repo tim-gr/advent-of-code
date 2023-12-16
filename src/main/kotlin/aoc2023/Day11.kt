@@ -1,6 +1,6 @@
 package aoc2023
 
-import util.coordinates.Coordinates
+import util.grid.Coordinates
 import util.io.println
 import util.io.readExampleInputFile
 import util.io.readInputFile
