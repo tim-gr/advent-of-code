@@ -1,8 +1,8 @@
 package aoc2023
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import util.io.readInputFile
-import kotlin.test.assertEquals
 
 class CheckSolutions {
 
